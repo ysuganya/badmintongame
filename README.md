@@ -8,7 +8,7 @@ Move the player racket left and right to return the shuttle. The AI controls the
 
 ## Screenshots
 
-Screenshots can be added after running the game locally. The first screen is the playable game court.
+![Badminton Rally gameplay screenshot](assets/screenshots/badminton-rally.png)
 
 ## Setup
 
