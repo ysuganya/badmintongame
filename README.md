@@ -10,6 +10,8 @@ Move the player racket left and right to return the shuttle. The AI controls the
 
 ![Badminton Rally gameplay screenshot](assets/screenshots/badminton-rally.png)
 
+![Badminton Rally human player illustration](assets/screenshots/badminton-human-player.png)
+
 ## Setup
 
 No install step is required to play the game. Install Node.js 18 or newer only if you want to run the tests.
