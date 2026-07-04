@@ -1,0 +1,154 @@
+:root {
+  color-scheme: light;
+  --ink: #152019;
+  --muted: #56645c;
+  --line: #d7ded2;
+  --court: #27745f;
+  --court-dark: #1d5f51;
+  --gold: #f2b84b;
+  --sky: #dfeef4;
+  --panel: #fbfcf7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #eef7f2 0%, #dce9ef 100%);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-shell {
+  width: min(1120px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 18px;
+  display: grid;
+  grid-template-rows: auto minmax(420px, 1fr) auto;
+  gap: 14px;
+}
+
+.scorebar,
+.controls {
+  border: 1px solid var(--line);
+  background: rgba(251, 252, 247, 0.88);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  box-shadow: 0 14px 32px rgba(25, 52, 42, 0.12);
+}
+
+.scorebar {
+  min-height: 84px;
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.scorebar strong {
+  display: block;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.label,
+.status span,
+.controls p {
+  color: var(--muted);
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+#matchState {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.court-wrap {
+  min-height: 0;
+  display: grid;
+  place-items: center;
+}
+
+canvas {
+  width: min(100%, 900px);
+  height: auto;
+  max-height: calc(100vh - 210px);
+  aspect-ratio: 900 / 620;
+  display: block;
+  border-radius: 8px;
+  border: 3px solid #f7faf4;
+  box-shadow: 0 28px 60px rgba(22, 54, 46, 0.28);
+  background: var(--court);
+  touch-action: none;
+}
+
+.controls {
+  min-height: 72px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  min-width: 92px;
+  min-height: 42px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--ink);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: #26362d;
+  outline: 3px solid rgba(242, 184, 75, 0.45);
+}
+
+.controls p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 640px) {
+  .game-shell {
+    padding: 10px;
+    grid-template-rows: auto auto auto;
+  }
+
+  .scorebar {
+    grid-template-columns: 72px 1fr 72px;
+    min-height: 76px;
+  }
+
+  .scorebar strong {
+    font-size: 1.8rem;
+  }
+
+  .status span,
+  .controls p {
+    font-size: 0.82rem;
+  }
+}

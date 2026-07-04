@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Badminton Rally</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="scorebar" aria-label="Match status">
+        <div>
+          <span class="label">You</span>
+          <strong id="playerScore">0</strong>
+        </div>
+        <div class="status">
+          <span id="matchState">First to 11 wins</span>
+          <span id="rallyState">Move to return the shuttle</span>
+        </div>
+        <div>
+          <span class="label">AI</span>
+          <strong id="aiScore">0</strong>
+        </div>
+      </section>
+
+      <section class="court-wrap" aria-label="Playable badminton court">
+        <canvas id="gameCanvas" width="900" height="620" aria-label="Badminton game canvas"></canvas>
+      </section>
+
+      <section class="controls" aria-label="Game controls">
+        <button id="serveButton" type="button">Serve</button>
+        <button id="resetButton" type="button">Reset</button>
+        <p>Keyboard: Left/Right or A/D. Mouse and touch also move the player.</p>
+      </section>
+    </main>
+
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>
